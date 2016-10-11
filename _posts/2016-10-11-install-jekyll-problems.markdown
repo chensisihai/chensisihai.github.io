@@ -20,6 +20,12 @@ gem install jekyll
 
 ![]({{ site.url }}/assets/i/2016-10-11-1.png)
 
+
+
+
+
+
+
 ##解决办法
 
 根据[http://www.haorooms.com/post/gem_not_use](http://www.haorooms.com/post/gem_not_use)提供的方法：
