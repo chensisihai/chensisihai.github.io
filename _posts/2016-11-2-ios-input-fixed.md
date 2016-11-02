@@ -15,7 +15,7 @@ tags:  input 兼容 ios
 
 
 
- ![]({{ site.url }}/assets/i/2016-11-2-1.jpg =300)
+ ![]({{ site.url }}/assets/i/2016-11-2-1.jpg)
 
 ## 解决办法
 
