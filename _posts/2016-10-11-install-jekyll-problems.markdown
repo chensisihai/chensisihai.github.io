@@ -23,7 +23,7 @@ gem install jekyll
 
 
 
-##解决办法
+## 解决办法
 
 根据[http://www.haorooms.com/post/gem_not_use](http://www.haorooms.com/post/gem_not_use)提供的方法：
 
@@ -46,13 +46,13 @@ gem sources -a https://rubygems.org/
 
 之后再进行安装就成功了。
 
-##遇到的问题 2
+## 遇到的问题 2
 
 jekyll安装完成，启动服务 jekyll serve 时，报错：
 
 ![]({{ site.url }}/assets/i/2016-10-11-3.png)
 
-##解决办法
+## 解决办法
 
 通过百度搜索，判断应该是jekyll版本兼容问题， 重新安装jekyll -v 2.4.0 ，命令如下：
 ```
