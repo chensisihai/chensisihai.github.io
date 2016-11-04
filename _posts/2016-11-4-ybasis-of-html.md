@@ -113,7 +113,7 @@ tags:   html 语义化
 
 只列举一些常用的：
 
-![]({{ site.url }}/assets/i/2016-11-4-1.png)
+![]({{ site.url }}/assets/i/2016-11-4-1.jpg)
 
 **&lt;header&gt;** 标签定义 section 或 document 的页眉。
 
