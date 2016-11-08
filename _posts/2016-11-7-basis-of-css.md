@@ -259,12 +259,14 @@ css和html是紧密相关的，在继续了解css的盒模型之前，需要先�
 
 1. 块状元素 
    常用块状元素： <div>、<p>、<h1>...<h6>、<ol>、<ul>、<dl>、<table>、<address>、<blockquote> 、<form>。 设置display: block 可以将元素显示为块级元素。
+
    它的特点：
    (1) 一个块级元素独占一行    
    (2) 元素的高度、宽度、行高以及顶和底边距都可设置。宽度在不设置时，为父容器的100%；
 
 2. 内联元素（行内元素）
 	常用的内联元素有： &lt;a&gt;、&lt;span&gt;、&lt;br&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;。设置display:inline 可以将元素显示为内联元素。
+
 	它的特点：
 	(1) 和其他元素都在一行上；
 	(2) 元素的高度、宽度及顶部和底部边距(margin)不可设置，宽度为内容宽度，不可改变。
@@ -274,6 +276,7 @@ css和html是紧密相关的，在继续了解css的盒模型之前，需要先�
 
 3. 内联块状元素
    内联块状元素（inline-block）就是同时具备内联元素、块状元素的特点，常用的内联块状元素有：&lt;img&gt;、&lt;input&gt;。设置display:inline-block 可以将元素显示为内联块状元素。
+   
    它的特点：
    (1) 和其他元素都在一行上；
    (2) 元素的高度、宽度、行高以及顶和底边距都可设置
