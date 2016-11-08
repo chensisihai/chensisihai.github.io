@@ -69,7 +69,7 @@ html标签在浏览器中都有各自的默认样式，而在不同的浏览器�
 	padding: 0;
 }
 ```
->注意： 以上这种做法未免有些极端，项目中一般不会这么使用。可以根据自己项目的具体情况进行样式重置
+>注意： 以上这种做法未免有些极端，项目中一般不会这么使用。可以根据自己项目的具体情况进行样式重置。现在流行使用[normalize.css](https://github.com/necolas/normalize.css/blob/master/normalize.css)统一样式的同时保留可辨识性；
 
 关于css reset可参考下 张鑫旭大神博文：[CSS reset的重新审视 – 避免样式重置](http://www.zhangxinxu.com/wordpress/2010/04/css-reset%E7%9A%84%E9%87%8D%E6%96%B0%E5%AE%A1%E8%A7%86-%E9%81%BF%E5%85%8D%E6%A0%B7%E5%BC%8F%E9%87%8D%E7%BD%AE/)
 
@@ -276,7 +276,7 @@ css和html是紧密相关的，在继续了解css的盒模型之前，需要先�
 
 3. 内联块状元素
    内联块状元素（inline-block）就是同时具备内联元素、块状元素的特点，常用的内联块状元素有：&lt;img&gt;、&lt;input&gt;。设置display:inline-block 可以将元素显示为内联块状元素。
-   
+
    它的特点：
    (1) 和其他元素都在一行上；
    (2) 元素的高度、宽度、行高以及顶和底边距都可设置
