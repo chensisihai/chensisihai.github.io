@@ -2,7 +2,7 @@
 layout: post
 title:  "web前端总结之css基础（三）"
 categories: css 
-tags:  css
+tags:  css 选择器 盒模型 布局
 ---
 
 * content
@@ -30,30 +30,6 @@ css3 是css的第3个版本，它在CSS2.1的基础上增加了很多强大的�
 | -o              | opera          |
 
 
-#### html的元素类型
-
-css和html是紧密相关的，在继续深入了解css之前，需要先了解下html的元素类型。html的元素可以分为三种：
-
-1. 块状元素 
-   常用块状元素： <div>、<p>、<h1>...<h6>、<ol>、<ul>、<dl>、<table>、<address>、<blockquote> 、<form>。 设置display: block 可以将元素显示为块级元素。
-   它的特点：
-   (1) 一个块级元素独占一行    
-   (2) 元素的高度、宽度、行高以及顶和底边距都可设置。宽度在不设置时，为父容器的100%；
-
-2. 内联元素（行内元素）
-	常用的内联元素有： &lt;a&gt;、&lt;span&gt;、&lt;br&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;。设置display:inline 可以将元素显示为内联元素。
-	它的特点：
-	(1) 和其他元素都在一行上；
-	(2) 元素的高度、宽度及顶部和底部边距(margin)不可设置，宽度为内容宽度，不可改变。
-
-	内联元素之间为何有间距问题？ 
-	除非是块级元素,否则浏览器会把连续的空白看成一个空格字符来对待    
-
-3. 内联块状元素
-   内联块状元素（inline-block）就是同时具备内联元素、块状元素的特点，常用的内联块状元素有：&lt;img&gt;、&lt;input&gt;。设置display:inline-block 可以将元素显示为内联块状元素。
-   它的特点：
-   (1) 和其他元素都在一行上；
-   (2) 元素的高度、宽度、行高以及顶和底边距都可设置
 
 
 #### css样式类型
@@ -111,21 +87,21 @@ p{ color:red; }
 ###### 类选择器
 
 ```html
-<span class="setGrey">公开课</span>
+<span class="set-grey">公开课</span>
 ```
 
 ```css
-.setGrey{ color: #333; }
+.set-grey{ color: #333; }
 ```
 
 ######  id选择器
 
 ```html
-<span id="setGrey">公开课</span>
+<span id="set-grey">公开课</span>
 ```
 
 ```css
-#setGrey{ color: #333; }
+#set-grey{ color: #333; }
 ```
 
 ###### 类选择器和id选择器的区别：
@@ -275,6 +251,35 @@ p span.warning{color:purple;} /*权值为1+1+10=12*/
 #footer .note p{color:yellow;} /*权值为100+10+1=111*/
 ```
 
+
+
+## html的元素类型
+
+css和html是紧密相关的，在继续了解css的盒模型之前，需要先了解下html的元素类型。html的元素可以分为三种：
+
+1. 块状元素 
+   常用块状元素： <div>、<p>、<h1>...<h6>、<ol>、<ul>、<dl>、<table>、<address>、<blockquote> 、<form>。 设置display: block 可以将元素显示为块级元素。
+   它的特点：
+   (1) 一个块级元素独占一行    
+   (2) 元素的高度、宽度、行高以及顶和底边距都可设置。宽度在不设置时，为父容器的100%；
+
+2. 内联元素（行内元素）
+	常用的内联元素有： &lt;a&gt;、&lt;span&gt;、&lt;br&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;。设置display:inline 可以将元素显示为内联元素。
+	它的特点：
+	(1) 和其他元素都在一行上；
+	(2) 元素的高度、宽度及顶部和底部边距(margin)不可设置，宽度为内容宽度，不可改变。
+
+	内联元素之间为何有间距问题？ 
+	除非是块级元素,否则浏览器会把连续的空白看成一个空格字符来对待    
+
+3. 内联块状元素
+   内联块状元素（inline-block）就是同时具备内联元素、块状元素的特点，常用的内联块状元素有：&lt;img&gt;、&lt;input&gt;。设置display:inline-block 可以将元素显示为内联块状元素。
+   它的特点：
+   (1) 和其他元素都在一行上；
+   (2) 元素的高度、宽度、行高以及顶和底边距都可设置
+
+
+
 ## 盒模型
 
 CSS中有一种基础设计模式叫盒模型，盒模型定义了Web页面中的元素中如何来解析。
@@ -285,14 +290,16 @@ CSS中每一个元素都是一个盒模型，包括html和body标签元素。在
 
 1、 W3C标准盒模型
    在浏览器中截图如下：
+
    ![]({{ site.url }}/assets/i/2016-11-7-2.jpg)
+
 
 ```
 外盒尺寸计算（元素空间尺寸）
 
-element空间高度＝height＋padding＋border＋margin
+element空间高度＝内容的height＋padding＋border＋margin
 
-element空间宽度＝width＋padding＋border＋margin
+element空间宽度＝内容的width＋padding＋border＋margin
 
 内盒尺寸计算（元素大小）
 
@@ -324,6 +331,8 @@ element宽度＝width（width包含了元素内容宽度、边框、内距）
 box-sizing: content-box | border-box | inherit  （新增）
 
 其中最为关键的是box-sizing中content-box和border-box两者的区别，他们之间的区别可以通过下图来展示，其对盒模型的不同解析：
+
+
 ![]({{ site.url }}/assets/i/2016-11-7-3.jpg)
 
 
@@ -379,12 +388,17 @@ float的值： left | right | none | inherit
 }
 ```
 上面代码展示如下图：
+
+
 ![]({{ site.url }}/assets/i/2016-11-7-4.png)
+
 
 这种情况下，就出现了一个问题。因为浮动元素脱离了文档流，所以包围图片和文本的 div 不占据空间。这个时候呢，就需要清浮动，使用clear属性
 
 clear 属性规定元素的哪一侧不允许其他浮动元素。
+
 ![]({{ site.url }}/assets/i/2016-11-7-5.png)
+
 
 清楚浮动方法有很多，可以参考大漠大神的博文： [Clear Float](http://www.w3cplus.com/css/clear-float)
 
@@ -415,3 +429,8 @@ flex是css3 新增的一种布局方案，弹性布局。
 
 关于弹性布局的学习可参考阮一峰博文 : [Flex 布局教程](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool)
 
+
+
+## css3变形与动画
+
+参考：w3cplus： [CSS3 Transform](http://www.w3cplus.com/content/css3-transform)    [CSS动画](http://www.w3cplus.com/css3/CSS3-animation.html)
