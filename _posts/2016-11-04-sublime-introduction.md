@@ -59,6 +59,9 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 5. **ConvertToUTF8**
 	解决中文乱码问题
 
+6. **Side​Bar​Enhancements**
+    在目录上点击右键，可以多出很多选择，创建文件、在浏览器运行等。
+
 >以上列出的只是我自己常用的插件，sublime的插件有很多，可自行百度，然后按照自己的需要选择安装。
 
 #### 插件安装方法： 
